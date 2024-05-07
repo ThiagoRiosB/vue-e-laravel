@@ -1,0 +1,43 @@
+Criar um projeto Laravel:
+composer create-project laravel/laravel nome-do-projeto
+
+Instalar todos os arquivos:
+composer install
+
+Startar o projeto:
+php artisan serve
+
+Criar um controller:
+php artisan make:controller nome-do-controller
+
+Criar migration:
+php artisan make:migration noma-da-migration
+
+Rodar migration: 
+php artisan migrate
+
+Criar model:
+php artisan make:model Pet
+
+Criar um banco de dados no docker:
+docker run 
+	--name pets_laravel
+	-e POSTGRESQL_USERNAME=admin
+	-e POSTGRESQL_PASSWORD=admin
+        -e POSTGRESQL_DATABASE=api_pets
+        -p 5432:5432
+        bitnami/postgresql
+
+Criar uma classe de e-mail:
+php artisan make:mail nome do comando
+
+Criar um arquivo para rodar uma atividate com horario agendado:
+
+php artisan make:command nome do comando
+
+Comando para enviar o e-mail que eu agendei:
+php artisan schedule:work
+
+Instalar o DomPdf no meu projeto:
+composer require barryvdh/laravel-dompdf
+
