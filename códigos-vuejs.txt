@@ -1,0 +1,34 @@
+Criar um novo projeto vuejs:
+npm create vue@latest
+
+principais bibliotecas que irei utilizar:
+
+npm install vuetify yup axios
+
+configurar o vuetify no arquivo main.js: (inclui o arquivo completo, é só colar
+no projeto)
+
+import './assets/main.css'
+
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
+const vuetify = createVuetify({
+  components,
+  directives,
+  icons: {
+    defaultSet: 'mdi'
+  }
+})
+
+const app = createApp(App)
+
+app.use(router).use(vuetify)
+
+app.mount('#app')
